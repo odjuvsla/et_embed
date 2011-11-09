@@ -27,7 +27,10 @@ public:
     virtual Int_t GetOCDBData(Int_t runNumber);
     
     virtual Int_t GetSimulatedDigits(TString digitDir, TString outfile = "mydigits.root");
-
+    
+    virtual Int_t Embed(TString dataDir);
+    
+    
 private:
   
   

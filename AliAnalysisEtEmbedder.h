@@ -5,6 +5,8 @@
 #include <Rtypes.h>
 #include <AliDigit.h>
 
+class TTree;
+
 class AliAnalysisEtEmbedder : public TObject
 {
 public:
@@ -13,31 +15,11 @@ public:
 
     virtual ~AliAnalysisEtEmbedder();
 
-    void SetSimDigitInputFile(TString /*simFile*/) {}
-
-    /**
-     * Directory containing simulated SDigits.
-     * TODO: Implement this!
-     */
-    void SetSimDigitInputDirectory(TString /*simDir*/) {}
-
-    /**
-     * Directory containing reconstructed real data
-     */
-    void SetRealDigitInputDirectory(TString /*realDir*/) {}
-
     /**
      * Load the generated digits from file containing a tree of digits.
      * Branch names must be PHOSDigits and/or EMCALDigits
      */
-    Int_t LoadDigitsFromFile(TString filename);
-
-    /**
-     * Add two digits
-     * @param lhs (left hand side) will contain the resulting digit
-     * @param rhs (right hand side) is the digit to add to lhs
-     */
-    virtual Int_t AddDigits(AliDigit *lhs, AliDigit *rhs) = 0;
+    Int_t LoadDigitsFromFile(TString filename = "mydigits.root");
     
     /** Get data from OCDB */
     virtual Int_t GetOCDBData(Int_t runNumber) = 0;
@@ -54,25 +36,26 @@ public:
      */
     virtual Int_t GetSimulatedDigits(TString digitDir, TString outfile = "mydigits.root") = 0;
     
+    /** 
+     * Embed the digits
+     * @param dataDir is the directory containing the "real" data
+     */
+    virtual Int_t Embed(TString dataDir) = 0;
+    
 
 protected:
 
+    /** Name of the simulated digit tree */
+    TString fTreeName;
+
     /** Name of the simulated digit branch (i.e. PHOSDigits or EMCALDigits) */
     TString fBranchName;
+    
+    /** Tree containing the simulated digits */
+    TTree *fSimDigitTree;
 
 private:
-
-    /** Directory containing the real data to embed into */
-    TString fRealDir;
-
-    /** File containing the simulated digits */
-    TString fSimFile;
-
-    /** Directory containing the simulated data
-     * (this method is not working at the moment, use the
-     * file method instead)
-     */
-    TString fSimDir;
+  
 
     ClassDef(AliAnalysisEtEmbedder, 0)
 };
