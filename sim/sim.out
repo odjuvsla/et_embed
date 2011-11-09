@@ -1,0 +1,405 @@
+  *******************************************
+  *                                         *
+  *        W E L C O M E  to  R O O T       *
+  *                                         *
+  *   Version  5.28/00f     4 August 2011   *
+  *                                         *
+  *  You are welcome to visit our Web site  *
+  *          http://root.cern.ch            *
+  *                                         *
+  *******************************************
+
+ROOT 5.28/00f (tags/v5-28-00f@40489, Aug 08 2011, 12:32:14 on linuxx8664gcc)
+
+CINT/ROOT C/C++ Interpreter version 5.18.00, July 2, 2010
+Type ? for help. Commands must be C++ statements.
+Enclose multiple statements between { }.
+
+Processing runSim.C...
+I-AliQAManager::Init: AliEn classes enabled in Root. AliCDBGrid factory registered.
+E-AliSimulation::SetRunQA:  is a wrong syntax, use "DetectorList:ActionList" 
+
+I-AliSimulation::ProcessEnvironmentVars: Processing environment variables
+I-AliSimulation::ProcessEnvironmentVars: Seed for random number generation = 0 
+I-AliSimulation::ProcessEnvironmentVars: Run number = -1
+I-AliCDBManager::Init: AliEn classes enabled in Root. AliCDBGrid factory registered.
+W-AliSimulation::InitRunNumber: Run number not yet set !!!! Setting it now to: 0
+I-AliCDBManager::Print: Run number = 0; Cache is ACTIVE; Number of active storages: 2
+	*** Default Storage URI: "local:///data/alice/AliRoot/aliroot/OCDB"
+	*** Specific storage 1: Path "GRP/GRP/Data" -> URI "local:///data/alice/analysis/embedding/run6/embedded/10000137366001.1100/simDigits"
+
+I-AliSimulation::RunSimulation: initializing gAlice with config file Config.C
+     ****************************************************************
+     *                                                              *
+     *    You are running AliRoot version NewIO
+     *    The SVN version for the current program is $Id: AliRun.cxx 39866 2010-03-23 14:39:09Z fca $
+     *                                                              *
+     ****************************************************************
+Trigger configuration is set to  p-p
+I-AliMagF::AliMagF: Maximim possible beam energy for requested beam is assumed
+I-AliMagF::Print: Maps:Maps
+I-AliMagF::Print: Solenoid (-1.00*)5 kG, Dipole ON (-1.00) 
+I-AliMagF::Print: Machine B fields for p-p beam (7000 GeV): QGrad: 22.0002 Dipole: 37.8781
+I-AliMagF::Print: Uses Sol30_Dip6_Hole of $(ALICE_ROOT)/data/maps/mfchebKGI_sym.root
+I-TGeoGlobalMagField::SetField: Global magnetic field set to <Maps>
+I-TGeoManager::TGeoManager: Geometry ALICE, ALICE geometry created
+I-AliMC::ConstructGeometry:       BODY R:0.00s C:0.00s
+I-AliMC::ConstructGeometry:       PHOS R:0.00s C:0.00s
+I-TGeoManager::SetTopVolume: Top volume is ALIC. Master volume is ALIC
+I-TGeoManager::CheckGeometry: Fixing runtime shapes...
+I-TGeoManager::CheckGeometry: ...Nothing to fix
+I-TGeoManager::CloseGeometry: Counting nodes...
+I-TGeoManager::Voxelize: Voxelizing...
+I-TGeoManager::CloseGeometry: Building cache...
+I-TGeoNavigator::BuildCache: --- Maximum geometry depth set to 100
+I-TGeoManager::CloseGeometry: 93910 nodes/ 47 volume UID's in ALICE geometry
+I-TGeoManager::CloseGeometry: ----------------modeler ready----------------
+I-AliMC::SetAllAlignableVolumes: Setting entries for all alignable volumes of active detectors
+I-TGeoManager::Export: Exporting ALICE ALICE geometry as root file. Optimizations streamed.
+W-AliGeomManager::LoadAlignObjsFromCDBSingleDet: 18 alignment objects loaded for GRP, which has 0 alignable volumes
+W-AliGeomManager::LoadAlignObjsFromCDBSingleDet: 16 alignment objects loaded for PHOS, which has 1136 alignable volumes
+I-AliGeomManager::ApplyAlignObjsFromCDB: Alignment objects loaded for: GRP PHOS 
+I-AliMC::ConstructOpGeometry: Optical properties definition
+I-AliMC::InitGeometry: Initialisation:
+I-AliMC::InitGeometry:       BODY R:0.00s C:0.00s
+I-AliMC::InitGeometry:       PHOS R:0.00s C:0.00s
+I-AliMC::MediaTable: Tracking media ranges:
+   BODY:   1 ->   3;   PHOS:   4 ->  22;
+I-AliSimulation::RunSimulation: Run number: 0
+I-AliSimulation::WriteGRPEntry: Writing global run parameters entry into the OCDB
+I-AliCDBLocal::PutEntry: CDB object stored into file /data/alice/analysis/embedding/run6/embedded/10000137366001.1100/simDigits/GRP/GRP/Data/Run0_0_v1_s0.root
+I-AliSimulation::RunSimulation: running gAlice
+
+ MZSTOR.  ZEBRA table base TAB(0) in /MZCC/ at adr   542222007    2051A6B7 HEX
+
+ MZSTOR.  Initialize Store  0  in /GCBANK/
+          with Store/Table at absolute adrs   542245053   542222007
+                                        HEX    205200BD    2051A6B7
+                                        HEX        5612           0
+                              relative adrs       22034           0
+          with     1 Str. in     2 Links in   5300 Low words in 4999970 words.
+          This store has a fence of   16 words.
+
+ MZLOGL.  Set Log Level 0 for store  0
+1*****  GEANT Version  3.21/11 Released on 100298
+0*****  Correction Cradle Version  0.1100
+
+ MZDIV.   Initialize Division  Constant  in Store  0
+          NW/NWMAX=   20004000000,  MODE/KIND=  1  2
+          Division 20 initialized.
+
+ MZLINK.  Initialize Link Area  /GCLINK/  for Store  0 NL/NS=    20    20
+
+ MZLINK.  Initialize Link Area  /GCSLNK/  for Store  0 NL/NS=   100   100
+ *** GCOMAD: cannot load common GCONSX
+1                                                                              
+ ******************************************************************************
+ ******************************************************************************
+ **                                                                          **
+ **                                                                          **
+ **              *......*                  Welcome to the Lund Monte Carlo!  **
+ **         *:::!!:::::::::::*                                               **
+ **      *::::::!!::::::::::::::*          PPP  Y   Y TTTTT H   H III   A    **
+ **    *::::::::!!::::::::::::::::*        P  P  Y Y    T   H   H  I   A A   **
+ **   *:::::::::!!:::::::::::::::::*       PPP    Y     T   HHHHH  I  AAAAA  **
+ **   *:::::::::!!:::::::::::::::::*       P      Y     T   H   H  I  A   A  **
+ **    *::::::::!!::::::::::::::::*!       P      Y     T   H   H III A   A  **
+ **      *::::::!!::::::::::::::* !!                                         **
+ **      !! *:::!!:::::::::::*    !!       This is PYTHIA version 6.214      **
+ **      !!     !* -><- *         !!       Last date of change: 22 Jan 2003  **
+ **      !!     !!                !!                                         **
+ **      !!     !!                !!       Now is  0 Jan 2000 at  0:00:00    **
+ **      !!                       !!                                         **
+ **      !!        lh             !!       Disclaimer: this program comes    **
+ **      !!                       !!       without any guarantees. Beware    **
+ **      !!                 hh    !!       of errors and use common sense    **
+ **      !!    ll                 !!       when interpreting results.        **
+ **      !!                       !!                                         **
+ **      !!                                Copyright T. Sjostrand (2003)     **
+ **                                                                          **
+ ** An archive of program versions and documentation is found on the web:    **
+ ** http://www.thep.lu.se/~torbjorn/Pythia.html                              **
+ **                                                                          **
+ ** When you cite this program, currently the official reference is          **
+ ** T. Sjostrand, P. Eden, C. Friberg, L. Lonnblad, G. Miu, S. Mrenna and    **
+ ** E. Norrbin, Computer Physics Commun. 135 (2001) 238.                     **
+ ** The large manual is                                                      **
+ ** T. Sjostrand, L. Lonnblad and S. Mrenna, LU TP 01-21 [hep-ph/0108264].   **
+ ** Also remember that the program, to a large extent, represents original   **
+ ** physics research. Other publications of special relevance to your        **
+ ** studies may therefore deserve separate mention.                          **
+ **                                                                          **
+ ** Main author: Torbjorn Sjostrand; Department of Theoretical Physics 2,    **
+ **   Lund University, Solvegatan 14A, S-223 62 Lund, Sweden;                **
+ **   phone: + 46 - 46 - 222 48 16; e-mail: torbjorn@thep.lu.se              **
+ ** Author: Leif Lonnblad; Department of Theoretical Physics 2,              **
+ **   Lund University, Solvegatan 14A, S-223 62 Lund, Sweden;                **
+ **   phone: + 46 - 46 - 222 77 80; e-mail: leif@thep.lu.se                  **
+ ** Author: Stephen Mrenna; Computing Division, Simulations Group,           **
+ **   Fermi National Accelerator Laboratory, MS 234, Batavia, IL 60510, USA; **
+ **   phone: + 1 - 630 - 840 - 2556; e-mail: mrenna@fnal.gov                 **
+ ** Author: Peter Skands; Department of Theoretical Physics 2,               **
+ **   Lund University, Solvegatan 14A, S-223 62 Lund, Sweden;                **
+ **   phone: + 46 - 46 - 222 31 92; e-mail: zeiler@thep.lu.se                **
+ **                                                                          **
+ **                                                                          **
+ ******************************************************************************
+ ******************************************************************************
+
+     Advisory warning type 7 given after        0 PYEXEC calls:
+     (PYUPDA:) Kinematically unallowed decay of KF =       18
+
+     Advisory warning type 7 given after        0 PYEXEC calls:
+     (PYUPDA:) Kinematically unallowed decay of KF =       18
+
+     Advisory warning type 7 given after        0 PYEXEC calls:
+     (PYUPDA:) Kinematically unallowed decay of KF =      113
+
+     Advisory warning type 7 given after        0 PYEXEC calls:
+     (PYUPDA:) Kinematically unallowed decay of KF =      115
+
+     Advisory warning type 7 given after        0 PYEXEC calls:
+     (PYUPDA:) Kinematically unallowed decay of KF =      215
+
+     Advisory warning type 7 given after        0 PYEXEC calls:
+     (PYUPDA:) Sum of branching ratios is  1.00705 for KF =      331
+
+     Advisory warning type 7 given after        0 PYEXEC calls:
+     (PYUPDA:) Sum of branching ratios is  1.05920 for KF =      421
+
+     Advisory warning type 7 given after        0 PYEXEC calls:
+     (PYUPDA:) Sum of branching ratios is  1.06710 for KF =     4122
+
+ Calculating cross section tables, see gphysi.dat for more information
+
+ Cross section calculation concluded successfully
+ **** GTRIGI: IEVENT=      1 IDEVT=      1 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=      2 IDEVT=      2 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=      3 IDEVT=      3 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=      4 IDEVT=      4 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=      5 IDEVT=      5 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=      6 IDEVT=      6 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=      7 IDEVT=      7 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=      8 IDEVT=      8 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=      9 IDEVT=      9 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     10 IDEVT=     10 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     11 IDEVT=     11 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     12 IDEVT=     12 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     13 IDEVT=     13 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     14 IDEVT=     14 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     15 IDEVT=     15 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     16 IDEVT=     16 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     17 IDEVT=     17 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     18 IDEVT=     18 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     19 IDEVT=     19 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     20 IDEVT=     20 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     21 IDEVT=     21 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     22 IDEVT=     22 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     23 IDEVT=     23 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     24 IDEVT=     24 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     25 IDEVT=     25 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     26 IDEVT=     26 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     27 IDEVT=     27 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     28 IDEVT=     28 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     29 IDEVT=     29 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     30 IDEVT=     30 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     31 IDEVT=     31 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     32 IDEVT=     32 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     33 IDEVT=     33 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     34 IDEVT=     34 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     35 IDEVT=     35 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     36 IDEVT=     36 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     37 IDEVT=     37 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     38 IDEVT=     38 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     39 IDEVT=     39 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     40 IDEVT=     40 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     41 IDEVT=     41 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     42 IDEVT=     42 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     43 IDEVT=     43 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     44 IDEVT=     44 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     45 IDEVT=     45 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     46 IDEVT=     46 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     47 IDEVT=     47 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     48 IDEVT=     48 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     49 IDEVT=     49 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     50 IDEVT=     50 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     51 IDEVT=     51 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     52 IDEVT=     52 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     53 IDEVT=     53 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     54 IDEVT=     54 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     55 IDEVT=     55 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     56 IDEVT=     56 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     57 IDEVT=     57 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     58 IDEVT=     58 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     59 IDEVT=     59 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     60 IDEVT=     60 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     61 IDEVT=     61 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     62 IDEVT=     62 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     63 IDEVT=     63 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     64 IDEVT=     64 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     65 IDEVT=     65 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     66 IDEVT=     66 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     67 IDEVT=     67 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     68 IDEVT=     68 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     69 IDEVT=     69 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     70 IDEVT=     70 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     71 IDEVT=     71 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     72 IDEVT=     72 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     73 IDEVT=     73 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     74 IDEVT=     74 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     75 IDEVT=     75 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     76 IDEVT=     76 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     77 IDEVT=     77 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     78 IDEVT=     78 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     79 IDEVT=     79 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     80 IDEVT=     80 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     81 IDEVT=     81 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     82 IDEVT=     82 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     83 IDEVT=     83 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     84 IDEVT=     84 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     85 IDEVT=     85 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     86 IDEVT=     86 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     87 IDEVT=     87 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     88 IDEVT=     88 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     89 IDEVT=     89 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     90 IDEVT=     90 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     91 IDEVT=     91 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     92 IDEVT=     92 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     93 IDEVT=     93 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     94 IDEVT=     94 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     95 IDEVT=     95 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     96 IDEVT=     96 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     97 IDEVT=     97 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     98 IDEVT=     98 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=     99 IDEVT=     99 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    100 IDEVT=    100 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    101 IDEVT=    101 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    102 IDEVT=    102 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    103 IDEVT=    103 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    104 IDEVT=    104 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    105 IDEVT=    105 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    106 IDEVT=    106 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    107 IDEVT=    107 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    108 IDEVT=    108 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    109 IDEVT=    109 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    110 IDEVT=    110 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    111 IDEVT=    111 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    112 IDEVT=    112 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    113 IDEVT=    113 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    114 IDEVT=    114 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    115 IDEVT=    115 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    116 IDEVT=    116 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    117 IDEVT=    117 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    118 IDEVT=    118 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    119 IDEVT=    119 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    120 IDEVT=    120 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    121 IDEVT=    121 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    122 IDEVT=    122 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    123 IDEVT=    123 Random Seeds = 1320836792           0
+W-AliRunLoader::LoadgAlice: gAlice already exists. Putting retrived object in folder named Event
+I-AliCDBManager::Print: Run number = 0; Cache is ACTIVE; Number of active storages: 2
+	*** Default Storage URI: "local:///data/alice/AliRoot/aliroot/OCDB"
+	*** Specific storage 1: Path "GRP/GRP/Data" -> URI "local:///data/alice/analysis/embedding/run6/embedded/10000137366001.1100/simDigits"
+
+W-AliRunLoader::LoadgAlice: gAlice already exists. Putting retrived object in folder named Event
+I-AliSimulation::RunSDigitization: creating summable digits for PHOS
+W-AliRunLoader::LoadgAlice: gAlice already exists. Putting retrived object in folder named Input0
+I-AliSimulation::RunDigitization: executing digitization
+W-AliRunLoader::LoadgAlice: AliRun is already in folder. Unload first.
+ <message repeated 200 times>
+I-AliStream::OpenNextFile: No more files in the stream
+W-AliRunLoader::LoadgAlice: gAlice already exists. Putting retrived object in folder named Event
+E-AliSimulation::RunHitsDigitization: the following detectors were not found: :
+W-AliRunLoader::LoadgAlice: gAlice already exists. Putting retrived object in folder named Event
+I-AliCentralTrigger::RunTrigger:  Triggering Detectors:  VZERO ITS T0 MUON TOF 
+
+I-AliCentralTrigger::RunTrigger:  Detectors with digits: PHOS 
+
+E-AliCentralTrigger::RunTrigger: the following detectors were not found: VZERO ITS T0 MUON TOF
+Real time 0:08:18, CP time 12.520
+AliSimulation
+   Run  R:498.1377s C:12.5200s (1 slices)
+   RunDigitization  R:82.8308s C:3.8000s (1 slices)
+   RunHitsDigitization  R:0.0018s C:0.0000s (1 slices)
+   RunSDigitization 
+         R:101.9922s C:0.5700s (1 slices)
+        creating summable digits for PHOS R:90.2164s C:0.5500s (1 slices)
+   RunSimulation  R:312.9392s C:8.0700s (1 slices)
+   RunTrigger  R:0.2169s C:0.0700s (1 slices)
+ **** GTRIGI: IEVENT=    124 IDEVT=    124 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    125 IDEVT=    125 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    126 IDEVT=    126 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    127 IDEVT=    127 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    128 IDEVT=    128 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    129 IDEVT=    129 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    130 IDEVT=    130 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    131 IDEVT=    131 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    132 IDEVT=    132 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    133 IDEVT=    133 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    134 IDEVT=    134 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    135 IDEVT=    135 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    136 IDEVT=    136 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    137 IDEVT=    137 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    138 IDEVT=    138 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    139 IDEVT=    139 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    140 IDEVT=    140 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    141 IDEVT=    141 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    142 IDEVT=    142 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    143 IDEVT=    143 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    144 IDEVT=    144 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    145 IDEVT=    145 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    146 IDEVT=    146 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    147 IDEVT=    147 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    148 IDEVT=    148 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    149 IDEVT=    149 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    150 IDEVT=    150 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    151 IDEVT=    151 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    152 IDEVT=    152 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    153 IDEVT=    153 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    154 IDEVT=    154 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    155 IDEVT=    155 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    156 IDEVT=    156 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    157 IDEVT=    157 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    158 IDEVT=    158 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    159 IDEVT=    159 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    160 IDEVT=    160 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    161 IDEVT=    161 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    162 IDEVT=    162 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    163 IDEVT=    163 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    164 IDEVT=    164 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    165 IDEVT=    165 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    166 IDEVT=    166 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    167 IDEVT=    167 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    168 IDEVT=    168 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    169 IDEVT=    169 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    170 IDEVT=    170 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    171 IDEVT=    171 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    172 IDEVT=    172 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    173 IDEVT=    173 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    174 IDEVT=    174 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    175 IDEVT=    175 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    176 IDEVT=    176 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    177 IDEVT=    177 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    178 IDEVT=    178 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    179 IDEVT=    179 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    180 IDEVT=    180 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    181 IDEVT=    181 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    182 IDEVT=    182 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    183 IDEVT=    183 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    184 IDEVT=    184 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    185 IDEVT=    185 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    186 IDEVT=    186 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    187 IDEVT=    187 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    188 IDEVT=    188 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    189 IDEVT=    189 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    190 IDEVT=    190 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    191 IDEVT=    191 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    192 IDEVT=    192 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    193 IDEVT=    193 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    194 IDEVT=    194 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    195 IDEVT=    195 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    196 IDEVT=    196 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    197 IDEVT=    197 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    198 IDEVT=    198 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    199 IDEVT=    199 Random Seeds = 1320836792           0
+ **** GTRIGI: IEVENT=    200 IDEVT=    200 Random Seeds = 1320836792           0
