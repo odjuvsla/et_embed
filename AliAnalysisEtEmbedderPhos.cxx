@@ -369,7 +369,6 @@ Int_t AliAnalysisEtEmbedderPhos::Embed(TString dataDir)
                     // The simulated digit does not overlap with any real digits, just adding it to the array of digits
                     TClonesArray *digArray = prl->Digits();
                     AliPHOSDigit *newDig =  new((*digArray)[nPhosDigits+nNewDigits]) AliPHOSDigit(*simDigit);
-		    std::cout << "New digit!" << std::endl;
 
                     // Have to do it like this for the moment, for our cause the ALTRO samples are not needed anyway
                     newDig->SetALTROSamplesHG(0, 0);
