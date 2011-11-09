@@ -30,6 +30,8 @@ public:
     
     virtual Int_t Embed(TString dataDir);
     
+    virtual Int_t AddBadChannelsToBcmFromFile(TString filename);
+    
     
 private:
   

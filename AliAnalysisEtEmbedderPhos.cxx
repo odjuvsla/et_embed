@@ -14,6 +14,9 @@
 #include "AliPHOSLoader.h"
 #include "AliPHOSDigit.h"
 #include "TFile.h"
+#include "TH2D.h"
+#include "TBranch.h"
+
 #include <vector>
 #include <algorithm>
 
@@ -366,6 +369,7 @@ Int_t AliAnalysisEtEmbedderPhos::Embed(TString dataDir)
                     // The simulated digit does not overlap with any real digits, just adding it to the array of digits
                     TClonesArray *digArray = prl->Digits();
                     AliPHOSDigit *newDig =  new((*digArray)[nPhosDigits+nNewDigits]) AliPHOSDigit(*simDigit);
+		    std::cout << "New digit!" << std::endl;
 
                     // Have to do it like this for the moment, for our cause the ALTRO samples are not needed anyway
                     newDig->SetALTROSamplesHG(0, 0);
@@ -414,12 +418,12 @@ Int_t AliAnalysisEtEmbedderPhos::Embed(TString dataDir)
         TObjArray *branchList = prl->TreeD()->GetListOfBranches();
 
         branchList->RemoveAt(0);
-	
-	std::cout << prl << std::endl;
-        TBranch * digitsBranch = prl->TreeD()->Branch("PHOS","TClonesArray",&phosDigits,bufferSize);
 
-        digitsBranch->Fill() ;
-        prl->WriteDigits("OVERWRITE");
+	TBranch * digitsBranch = prl->TreeD()->Branch("PHOS","TClonesArray",&phosDigits,bufferSize);
+        
+	digitsBranch->Fill() ;
+
+	prl->WriteDigits("OVERWRITE");
 	
     }
     
@@ -441,3 +445,110 @@ Int_t AliAnalysisEtEmbedderPhos::Embed(TString dataDir)
 }
 
 
+Int_t AliAnalysisEtEmbedderPhos::AddBadChannelsToBcmFromFile(TString filename)
+{
+    std::cout << "Number of bad channels from OCDB: " << fBadChannels.size() << std::endl;
+    
+    TFile *badFile = TFile::Open(filename, "READ");
+    
+    TH2D *badMap = (TH2D*)badFile->Get("PHOS_BadMap_mod3");
+    
+    for(Int_t x = 0; x < badMap->GetNbinsX(); x++)
+    {
+      for(Int_t z = 0; z < badMap->GetNbinsY(); z++)
+      {
+	if(x<16) 
+	{
+  	  Int_t relId[4];
+	  relId[0] = 3;
+	  relId[1] = 0;
+	  relId[2] = x+1;
+	  relId[3] = z+1;
+	  Int_t absId = 0;
+	  fGeoUtils->RelToAbsNumbering(relId, absId);
+	  fBadChannels.push_back(absId);
+	}
+	//if(badMap->GetBinContent(x,z) == 1)
+	if(0)
+	{
+	  Int_t relId[4];
+	  relId[0] = 3;
+	  relId[1] = 0;
+	  relId[2] = x;
+	  relId[3] = z;
+	  Int_t absId = 0;
+	  fGeoUtils->RelToAbsNumbering(relId, absId);
+	  fBadChannels.push_back(absId);
+	}
+      }
+    }
+    badMap = (TH2D*)badFile->Get("PHOS_BadMap_mod2");
+    
+    
+    for(Int_t x = 0; x < badMap->GetNbinsX(); x++)
+    {
+      for(Int_t z = 0; z < badMap->GetNbinsY(); z++)
+      {
+	if(x < 16 && z >=14)
+	{
+	  Int_t relId[4];
+	  relId[0] = 3;
+	  relId[1] = 0;
+	  relId[2] = x+1;
+	  relId[3] = z+1;
+	  Int_t absId = 0;
+	  fGeoUtils->RelToAbsNumbering(relId, absId);
+	  fBadChannels.push_back(absId);
+	  
+	}
+	if(x >=32 && x < 48)
+	{
+	  Int_t relId[4];
+	  relId[0] = 3;
+	  relId[1] = 0;
+	  relId[2] = x+1;
+	  relId[3] = z+1;
+	  Int_t absId = 0;
+	  fGeoUtils->RelToAbsNumbering(relId, absId);
+	  fBadChannels.push_back(absId);
+	}
+	//if(badMap->GetBinContent(x,z) == 1)
+	if(0)
+	{
+	  Int_t relId[4];
+	  relId[0] = 2;
+	  relId[1] = 0;
+	  relId[2] = x;
+	  relId[3] = z;
+	  Int_t absId = 0;
+	  fGeoUtils->RelToAbsNumbering(relId, absId);
+	  fBadChannels.push_back(absId);
+	}
+      }
+    }
+    badMap = (TH2D*)badFile->Get("PHOS_BadMap_mod1");
+    
+    
+    for(Int_t x = 0; x < badMap->GetNbinsX(); x++)
+    {
+      for(Int_t z = 0; z < badMap->GetNbinsY(); z++)
+      {
+	//if(badMap->GetBinContent(x,z) == 1)
+	if(0)
+	{
+	  Int_t relId[4];
+	  relId[0] = 1;
+	  relId[1] = 0;
+	  relId[2] = x;
+	  relId[3] = z;
+	  Int_t absId = 0;
+	  fGeoUtils->RelToAbsNumbering(relId, absId);
+	  fBadChannels.push_back(absId);
+	}
+      }
+    }
+    std::cout << "New number of bad channels: " << fBadChannels.size() << std::endl;
+    
+    
+    return 0;
+}

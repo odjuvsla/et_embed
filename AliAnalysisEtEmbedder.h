@@ -29,6 +29,11 @@ public:
      */
     virtual Int_t AddBadChannelsToBcm(Float_t a) = 0;
     
+    /**
+     * Add bad channels to the ones from OCDB based on TH2 histograms from a file. Names of histograms defined by detector class
+     */
+    virtual Int_t AddBadChannelsToBcmFromFile(TString filename) = 0;
+    
     /** 
      * Creates digits from simulated sdigits output and store in a file 
      * @param digitDir the directory of the simulated digits
@@ -41,6 +46,7 @@ public:
      * @param dataDir is the directory containing the "real" data
      */
     virtual Int_t Embed(TString dataDir) = 0;
+    
     
 
 protected:
